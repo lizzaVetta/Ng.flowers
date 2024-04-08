@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Примеры букетов</title>
+    <link href="photo.css" rel="stylesheet" type="text/css" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>NG.FLOWERS</h1>
+
+      <div class="img-container">
+        <div class="img">
+          <img src="images/5.jpg" alt="" />
+        </div>
+
+        <div class="img">
+          <img src="images/9.jpg" alt="" />
+        </div>
+
+        <div class="img">
+          <img src="images/4.jpg" alt="" />
+        </div>
+
+        <div class="img">
+          <img src="images/Flowers.jpg" alt="" />
+        </div>
+
+        <div class="img">
+          <img src="images/8.jpg" alt="" />
+        </div>
+
+        <div class="img">
+          <img src="images/10.jpg" alt="" />
+        </div>
+
+        <div class="img">
+          <img src="images/1.jpg" alt="" />
+        </div>
+
+        <div class="img">
+          <img src="images/7.jpg" alt="" />
+        </div>
+
+        <div class="img">
+          <img src="images/6.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="pop-up">
+        <span>&times;</span>
+        <img src="images/2.jpg" alt="" />
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".img-container img").forEach((img) => {
+        img.onclick = () => {
+          document.querySelector(".pop-up").style.display = "block";
+          document.querySelector(".pop-up img").src = img.getAttribute("src");
+        };
+      });
+      document.querySelector(".pop-up span").onclick = () => {
+        document.querySelector(".pop-up").style.display = "none";
+      };
+    </script>
+    <ul>
+      <li>
+        <a href="homepage.html">Главная страница</a>
+      </li>
+      <li>Фото букетов</li>
+      <!-- <li>
+        <a href="feedback.html">Обратная связь</a>
+      </li> -->
+    </ul>
+  </body>
+</html>

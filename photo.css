@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #feeb;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background: #feeb;
+}
+h1 {
+  text-align: center;
+  color: pink;
+  padding: 15px;
+  text-shadow: 3px 3px 1px pink;
+  text-shadow: 3px 3px 1px black;
+}
+
+body,
+textarea,
+button,
+input {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+/* input {
+  border-radius: 8px;
+  height: 32px;
+  padding: 8px;
+  border: 2px solid pink;
+  margin-bottom: 16px;
+  outline: none;
+} */
+/* textarea {
+  border-radius: 8px;
+  height: auto;
+  padding: 8px;
+  border: 2px solid pink;
+  margin-bottom: 16px;
+  outline: none;
+  resize: vertical;
+  overflow: hidden;
+} */
+/* button {
+  padding: 8px;
+  color: black;
+  background: #feeb;
+  border-radius: 8px;
+  border-color: pink;
+} */
+h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 28px;
+  background-color: #fff;
+}
+/* label {
+  margin-bottom: 4px;
+  margin-left: 4px;
+} */
+/* form {
+  width: 800px;
+  padding: 32px 32px;
+  margin: 100px auto;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 32px;
+  text-align: center;
+} */
+
+ul {
+  font-size: 14px; /* px значит 'пиксели': базовый шрифт будет 10 пикселей в высоту  */
+  font-family: Pacifico;
+  margin: 0;
+  padding: 20px 0;
+  font-size: 28px;
+  line-height: 2;
+  letter-spacing: 1px;
+  text-align: center;
+}
+a:link,
+a:visited {
+  color: pink;
+}
+a:hover,
+a:active {
+  color: black;
+}
+.container .img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.container .img-container .img {
+  width: 400px;
+  height: 300px;
+  border: 7px solid #fff;
+  overflow: hidden;
+}
+.container .img-container .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.container .img-container .img img:hover img {
+  transform: scale(1.1);
+}
+
+.container .pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+.container .pop-up img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  border-radius: 8px;
+  width: 700px;
+}
+.container .pop-up span {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  font-size: 50px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.feedback {
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  min-height: 1px;
+}
+
+/* .img {
+  max-height: 80%;
+  max-width: 80%;
+  transform: scale(1);
+} */
+img {
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* @media (min-width: 900px) {
+  .feedback {
+    flex: 0 0 100%;
+    order: 1;
+  }
+}
+@media (min-width: 1400px) {
+  .feedback {
+    flex: 10% 10% 80%;
+    order: 1;
+  }
+}
+@media all (min-width: 1200px) {
+  div {
+    widt: 800px;
+  }
+}
+@media all (min-width: 400px) {
+  div {
+    widt: 350px;
+  }
+}
+@media screen and (min-aspect-ratio: 239/100) {
+  div {
+    height: 80%;
+  }
+}
+div {
+  height: 70%;
+  max-height: 1900px;
+} */
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
