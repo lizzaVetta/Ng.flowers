@@ -1,54 +1,467 @@
-<!DOCTYPE html>
+<!DOCTYPE html
 <html>
   <head>
-    <link
-      href="http://fonts.googleapis.com/css?family=Pacifico"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link href="site.css" rel="stylesheet" type="text/css" />
-    <meta charset="utf-8" />
-    <meta
-      name="description"
-      content="Мастерская предлагает ручную работу по созданию реалистичных цветов и авторских букетов из фоамирана на заказ."
-    />
-    <title>NG.Flowers</title>
+    <style>
+      * {
+        box-sizing: border-box;
+       
+      }
+      :root {
+        --pink:rgb(255, 192, 203) ;
+        --white: #ffffff;
+        --darkpink:#ec8596;
+        --lightpink:#ffc0cb;
+      }
+      body {
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 20px;
+        background-image: linear-gradient(var(--white),var(--pink));
+       
+      }
+      .header {
+        padding: 30px;
+        color: var(--white);
+        background: url(images/10.jpg) no-repeat center; 
+        background-size: cover;
+        height: 300px;
+        position: relative;
+        opacity: 0.9;
+      }
+
+      .header-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--white);
+        text-shadow: -1px 0 var(--lightpink), 0 1px var(--pink), 1px 0 rgb(201, 99, 99), 0 -1px rgb(201, 99, 99);
+      }
+
+      .header h1 {
+        font-size: 90px;
+      }
+      .topnav {
+        overflow: hidden;
+        background-color: var(--pink);
+      }
+      .topnav a {
+        float: left;
+        display: block;
+        color: var(--white);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .topnav a:hover {
+        background-color: var(--white);
+        color: var(--darkpink);
+      }
+
+
+
+/*  */
+      @media screen and (max-width: 700px) and (min-width: 375px) {
+       .topnav a {
+          float: none;
+          width: 100%;
+          
+        }
+        div.rightcolumn {
+          float: none;
+          width: 590px;
+         background-color: var(--white);
+         color: var(--darkpink) ;
+          align-items: center;
+          /* display: none; */
+          
+        } 
+        div.rightcolumn a.color{
+          background-color: var(--lightpink);
+        }
+        .row{
+        display:contents;
+        align-items: center;
+        }
+        div.rightcolumn a.color:hover{
+          background-color:var(--pink);
+      }
+    }
+/*  */
+
+
+
+      .leftcolumn {
+        float: left;
+        width: 70%;
+        background-color: var(--white);
+        color: var(--darkpink);
+      }
+      .rightcolumn {
+        float: left;
+        width: 30%;
+        background-color: var(--pink);
+        padding: 20px;
+        color: var(--white);
+      }
+      a.color  {
+        padding: 10px;
+        text-decoration: none;
+        color:var(--darkpink);
+        background-color: var(--white);
+        margin: 30px 10px;
+        font-size: small;
+        
+        
+      }
+      a.color:hover{
+        color:var(--white);
+        text-decoration: none;
+        background-color: var(--darkpink);
+      }
+     #button{
+      margin: 30px 0px 30px 10px;
+      font-size: 30px;
+      padding: 20px;
+      text-align: center;
+      border: 10px solid transparent;
+      border-image: url(images/цветок.png) 110 round;
+      
+     }
+     a#bu{
+      word-break:keep-all;
+      font-size: 23px;
+     }
+     div#button a{
+      text-decoration: none;
+      color: var(--darkpink);
+    
+     }
+    div#button:hover{
+      background-color:var(--white);
+      color: var(--darkpink);
+      text-decoration: none;
+  
+    }
+
+    h2{
+       padding: 20px;
+      }
+
+    h3{
+      font-size: 24px;
+      }
+
+      p {
+        padding: 20px;
+      }
+      div.image {
+        background-color: var(--white);
+        width: 100%;
+        margin: 20px;
+      }
+      img{
+        padding: 10px;
+       
+      }
+      .card {
+        background-color: var(--white);
+        padding: 20px;
+        margin-top: 20px;
+      }
+      .row::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .footer {
+       
+        float: left;
+        background: var(--white);
+        margin-top: 20px;
+        color: var(--darkpink);
+        width: 100%;
+        text-align: center;
+      }
+      .menu {
+        float: left;
+        font-size: 18px;
+        width: 50%;
+        padding: 10px;
+      }
+      .menu a{
+        display: block;
+        padding: 5px;
+        margin: 0px 10px;
+        color:var(--darkpink);
+        text-decoration: none;
+      }
+      .kontact{    
+        width: 50%;
+        padding: 10px;
+        color:var(--darkpink);
+        text-decoration: none;
+        float: left;
+        font-size: 18px;
+      }
+      .kontact a{
+        display: block;
+        padding: 10px;
+        color:var(--darkpink);
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
-    <div class="title">
-      <h1>NG.FLOWERS</h1>
-    </div>
-    <div class="text_img">
-      <h2>
-        Мастерская реалистичных букетов ручной работы для интерьера и
-        мероприятий
-      </h2>
-    </div>
-    <div class="img">
-      <img src="images/5.jpg" alt="Букет тюльпанов в вазе на столе" />
-    </div>
-    <div class="container2">
-      <div class="work2">
-        <p>
-          Мастерская предлагает авторские букеты, выполненные из фоамирана, а
-          также букеты по вашим эскизам, с учетом всех пожеланий.
-        </p>
-        <p><a href="photo.html">Примеры работ</a></p>
+    <div class="header">
+      <div class="header-text">
+        <h3>Мастерская реалистичных букетов из фоамирана</h3>
+        <h1>NG.Flowers</h1>
       </div>
+    </div>
+    <div class="topnav">
+      <a href="homepage.html">О нас</a>
+      <a href="gallery.html"
+        >Примеры работ</a
+      >
+     
+      <a href="contacts.html">Наши контакты</a>
+    </div>
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>О нас</h2>
+          <p>
+            NG.Flowers - Мастерская по изготовлению цветочных композиций,
+            украшений и интерьерных цветов.<br />
+            Мы предлагаем авторские букеты, выполненные из фоамирана.<br />
+            Изготавливаем букеты также и по вашим эскизам, фото.<br />
+            На рынке уже 5 лет. Заказ от 1 шт.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Пришлите фото, получите композицию!</h2>
+          <div class="image">
+            <img
+              src="images/1.jpg"
+              alt="цветы"
+              width="360px"
+              height="360px"
+             />
+            <img
+              src="images/7.jpg"
+              alt="цветы"
+              width="360px"
+              height="360px"/>
+          
+            <img
+              src="images/9.jpg"
+              alt="цветы"
+              width="360px"
+              height="360px"/>
+            <img
+              src="images/Flowers.jpg"
+              alt="цветы"
+              width="360px"
+              height="360px"
 
-      <div class="work">
-        <p>Готовы предложить:</p>
-        <ul>
-          <li>интерьерные цветы</li>
-          <li>композиции</li>
-          <li>цветочные украшения</li>
-          <li>свадебные букеты</li>
-          <li>аксессуары для фотосессии</li>
-        </ul>
+              
+            />
+          </div>
+        </div>
       </div>
+      <div class="rightcolumn">
 
-      <div class="feedback1">
-        <p>
+
+
+
+<!-- <table>
+
+  <tr style="height: 70px;">
+    <td style="height: 100%;">
+
+
+       <h3>Contacts</h3> 
+
+
+      <a href="https://wa.me/+79169667551" style="font-size: 95%;">Заказать композицию</a>
+    </td>
+  </tr>
+
+  <tr style="height: 15px;">
+    <td>
+      
+    </td>
+  </tr>
+
+  <tr style="height: 70px;">
+    <td style="height: 100%;">
+
+
+
+      <h3>Contacts</h3> 
+
+
+
+      <a href="https://wa.me/+79169667551" class="color" id="bu">Заказать композицию</a>
+    </td>
+  </tr>
+
+  <tr style="height: 15px;">
+    <td>
+      
+    </td>
+  </tr>
+
+  <tr style="height: 70px;">
+    <td style="height: 100%;">
+
+
+
+
+      <h3>Contacts</h3> 
+
+
+
+
+      <a href="https://wa.me/+79169667551" class="color" id="bu">Заказать композицию</a>
+    </td>
+  </tr>
+
+
+
+
+
+</table> -->
+
+ 
+
+
+<!-- 
+
+
+         <table>
+          <tr style="height: 50px;">
+            <td>
+              <h2>Контакты</h2>
+            </td>
+          </tr>
+          <tr style="height: 50px;">
+            <td>
+              <p><strong>По всем вопросам:</strong></p>
+            </td>
+          </tr>
+          <tr style="height: 50px;">
+            <td>
+              <a href="tel:+79169667551"class="color">+7(916)-966-75-51</a> 
+            </td>
+          </tr>
+          <tr style="height: 50px;">
+            <td>
+              <p><strong>Для заказа:</strong></p> 
+            </td>
+          </tr>
+          <tr style="height: 50px;">
+            <td>
+              <a
+          href="https://wa.me/+79169667551"
+          title="WhatsApp Наталья Гущина"
+          target="_blank" class="color"
+          >WhatsApp Наталья Гущина</a>
+            </td>
+          </tr>
+          <tr style="height: 50px;"><td style="height: 50px;"></td></tr>
+          <tr style="height: 50px;">
+            <td>
+              <a
+              href="https://vk.com/id486040922"
+              title="Мастерская NG.FLOWERS"
+              target="_blank"
+              class="color">Мастерская NG.FLOWERS</a>
+            </td>
+          </tr>
+          <tr style="height: 50px;">
+            <td>
+              
+                <a href="https://wa.me/+79169667551" id="bu">
+                Заказать композицию</a>
+             
+            </td>
+          </tr>
+        </table> 
+ -->
+
+<!-- 123 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Контакты</h2>
+        <p><strong>По всем вопросам:</strong></p>
+        <a href="tel:+79169667551"class="color">+7(916)-966-75-51</a>
+        
+        <p><strong>Для заказа:</strong></p>
+        <a
+          href="https://wa.me/+79169667551"
+          title="WhatsApp Наталья Гущина"
+          target="_blank" class="color"
+          >WhatsApp</a
+        >
+       <br><br> <br>
+        <a
+          href="https://vk.com/id486040922"
+          title="NG.FLOWERS"
+          target="_blank"
+          class="color"
+        >
+          NG.FLOWERS
+        </a>
+      
+          <div id="button">
+            <a href="https://wa.me/+79169667551" id="bu">
+            Заказать композицию</a
+           >
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="footer">
+      <div class="menu">
+        <h2>Меню</h2>
+        <a href="homepage.html">О нас</a>
+        <a href="gallery.html"
+          >Примеры работ</a
+        >
+        
+        <a href="contacts.html">Наши контакты</a>
+      </div>
+      <div class="kontact">
+        <h2>Контакты</h2>
+        <strong>По всем вопросам:</strong>
+        <a href="tel:+79169667551">+7(916)-966-75-51</a>
+        
+          <strong>Для заказа:</strong>
+          <a
+            href="https://wa.me/+79169667551"
+            title="WhatsApp Наталья Гущина"
+            target="_blank"
+            >WhatsApp Наталья Гущина</a
+          >
+          
           <a
             href="https://vk.com/id486040922"
             title="Мастерская NG.FLOWERS"
@@ -56,24 +469,8 @@
           >
             Мастерская NG.FLOWERS
           </a>
-        </p>
-        <p>По всем вопросам пишите в WhatsApp:</p>
-
-        <p>
-          <a
-            href="https://wa.me/+79169667551"
-            title="WhatsApp Наталья Гущина"
-            target="_blank"
-            >WhatsApp Наталья Гущина</a
-          >
-        </p>
-      </div>
-      <div class="feedback2">
-        <p>
-          Букеты
-          <strong style="color: pink" class="tm">NG.FLOWERS</strong> будут
-          радовать вас долгие годы и напоминать о каждом волнующем событии.
-        </p>
+        
+       
       </div>
     </div>
   </body>
